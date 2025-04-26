@@ -1,5 +1,5 @@
-
 const form = document.getElementById('bookingForm');
+const bookings = [];  // Armazenando agendamentos
 
 form.addEventListener('submit', function(event) {
   event.preventDefault();
@@ -10,7 +10,15 @@ form.addEventListener('submit', function(event) {
   const data = document.getElementById('data').value;
   const hora = document.getElementById('hora').value;
 
-  alert(`✨ Agendamento realizado com sucesso!\n\nNome: ${nome}\nServiço: ${servico}\nData: ${data} às ${hora}\nContato: ${telefone}`);
+  // Verificar se o horário já está reservado
+  const isBooked = bookings.some(booking => booking.data === data && booking.hora === hora);
 
-  form.reset();
+  if (isBooked) {
+    alert(`O horário ${hora} já está reservado! Escolha outro horário.`);
+  } else {
+    bookings.push({ nome, telefone, servico, data, hora });
+    alert(`✨ Agendamento realizado com sucesso!\n\nNome: ${nome}\nServiço: ${servico}\nData: ${data} às ${hora}\nContato: ${telefone}`);
+
+    form.reset();
+  }
 });
