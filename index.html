@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Studio Beauty | Agende Seu Horário</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>Studio Beauty</h1>
+      <nav>
+        <a href="#agendamento">Agendar</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>Beleza que Inspira ✨</h2>
+        <p>Agende seu horário com facilidade e descubra uma nova versão de você.</p>
+        <a href="#agendamento" class="btn">Agende Agora</a>
+      </div>
+    </section>
+
+    <section id="servicos" class="servicos">
+      <div class="container">
+        <h2>Serviços</h2>
+        <ul>
+          <li>Corte de Cabelo</li>
+          <li>Coloração</li>
+          <li>Manicure e Pedicure</li>
+          <li>Design de Sobrancelhas</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="agendamento" class="agendamento">
+      <div class="container">
+        <h2>Agendamento</h2>
+        <form id="bookingForm">
+          <input type="text" id="nome" name="nome" placeholder="Nome completo" required>
+          <input type="tel" id="telefone" name="telefone" placeholder="Telefone" required>
+          <select id="servico" name="servico" required>
+            <option value="">Selecione o serviço</option>
+            <option value="Corte">Corte</option>
+            <option value="Coloração">Coloração</option>
+            <option value="Manicure">Manicure</option>
+            <option value="Sobrancelha">Sobrancelha</option>
+          </select>
+          <input type="date" id="data" name="data" required>
+          <input type="time" id="hora" name="hora" required>
+          <button type="submit" class="btn">Confirmar Agendamento</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="contato" class="contato">
+      <div class="container">
+        <h2>Contato</h2>
+        <p>Whatsapp: (11) 99999-9999</p>
+        <p>Email: contato@studiobeauty.com</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Studio Beauty. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
